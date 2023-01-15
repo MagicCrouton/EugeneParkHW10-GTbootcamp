@@ -5,6 +5,8 @@
 
 The application generates an html page based on user inputs via the inquierer package in node, in addition unit tests were provided and made sure to be passing during devolpment
 
+[![Watch the video](./Assets/Pictures/VideoScreenShot.png)](https://drive.google.com/file/d/1dCNEjJWXrvvzAiFij7XSX1Ot_ImJYt1Z/view?usp=share_link)
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -34,6 +36,9 @@ N/A
 ## Tests
 
 Tests are located in the test folder and are initialized by CLI command npx jest.
+
+[![Watch the video](./Assets/Pictures/VideoScreenShot.png)](https://drive.google.com/file/d/1dCH1I3m09wGsEFmIp8dEAB-BuA9z59a6/view?usp=share_link)
+
 
 ## Questions
 
