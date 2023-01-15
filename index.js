@@ -30,16 +30,16 @@ await inquirer.prompt(Utilites.QuestionIndex.Intern).then((response) =>{
 async function teammate(){
     let i = false;
     while (i===false)
-    await inquirer.prompt(Utilites.listQuestion).then((response)=> {
+    await inquirer.prompt(Utilites.listQuestion).then(async (response)=> {
         if (response.nextTeam === 'no more Members'){
             // checks to see if the user want's to stop adding team members
             i = true;
         }
         else if (response.nextTeam === 'Engineer') {
-            newEngineer();
+           await newEngineer();
             }
         else {
-            newIntern();
+            await newIntern();
             }
            })
 }
