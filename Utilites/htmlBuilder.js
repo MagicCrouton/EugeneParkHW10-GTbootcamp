@@ -2,17 +2,27 @@ const fs = require('fs');
 const htmlArrangment = [];
 
 // note: i would use express for this portion but i wanted to see how to build a site without express
+// this function just takes a prebuild html site turns the header card elements and footer elements into an array which then is joined via a.join('') and saved to file according to the manager name
 
 function buildSite(team){
     team.forEach((element, index) => {
+    if (element.getRole() === 'Manager') {
+       let uniqueOut = element.officeNumber;
+    }
+    else if (element.getRole()==='Engineer') {
+        let uniqueOut = element.github;
+    }
+    else {
+        let uniqueOut = element.school;
+    }
     htmlArrangment[index] =
         `<div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">${element.Name}</h5>
+            <h5 class="card-title">${element.name}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${element.getRole()}</h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="card-link">${element.email}</a>
-            <a href="#" class="card-link">Another link</a>
+            <a href="#" class="card-link">${uniqueOut}</a>
         </div>
         </div>`
     });
