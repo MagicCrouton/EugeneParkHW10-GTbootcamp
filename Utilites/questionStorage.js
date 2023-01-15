@@ -66,8 +66,19 @@ const QuestionIndex =
                 message: 'Where does your Intern go to School?',
             },  
         ],
-      }  
+      } 
+
+const listQuestion = [
+    {
+        type: 'list',
+        message: 'Do you want another team member?',
+        name: 'nextTeam',
+        choices: ['Engineer', 'Intern', 'no more Members']
+    }     
+]
+
 
 module.exports = {
-    QuestionIndex
+    QuestionIndex,
+    listQuestion
 }
