@@ -21,7 +21,7 @@ User will need Node.Js and install depndencies using NPM i in the CLI
 
 ## Usage
 
-navigate to root folder and invoke node index.js to start the program. follow promtpts to add as many team members as you need. The app will generate an HTML file so your roster can be viewed
+navigate to root folder and invoke node index.js to start the program. follow promtpts to add as many team members as you need. The app will generate an HTML file so your roster can be viewed. Once a manager is added to the roster the user may add as many engineers and or interns as needed, to finish the roster and build the html page you will need to choose "no more members".
 
 ## Contributing
 
@@ -33,7 +33,7 @@ N/A
 
 ## Tests
 
-Tests are located in the test foler and are initialized by CLI command npx jest.
+Tests are located in the test folder and are initialized by CLI command npx jest.
 
 ## Questions
 
