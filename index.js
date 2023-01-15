@@ -2,6 +2,7 @@
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const htmlBuilder = require('./Utilites/htmlBuilder')
 const inquirer = require('inquirer');
 const Utilites = require('./Utilites/questionStorage.js');
 const team = [];
@@ -49,61 +50,7 @@ async function run () {
     await newManager();
     await teammate();
     console.log(team);
+    htmlBuilder.buildSite(team)
 }
 
 run();
-
-
-// init();
-// function teamBuild () {
-//     let i = false;
-//     while (i===false) {
-//     inquirer.prompt(Utilites.listQuestion).then((response)=> {
-//             if (response.nextTeam === 'no more Members'){
-//                 // checks to see if the user want's to stop adding team members
-//                 i = true;
-//             }
-//             else {
-//             let current = response.nextTeam;
-//                 if (current === 'Engineer'){
-//                     newEngineer()
-//                 }
-//                 else {
-//                     newIntern()
-//                 }
-//             }})
-//         }}
-
-// async function init() {
-//     await manager();
-//     // await teamBuild()
-// }
-// async function teammate(){
-//     let i = false;
-//     while (i===false)
-//     await inquirer.prompt(Utilites.listQuestion).then((response)=> {
-//         if (response.nextTeam === 'no more Members'){
-//             // checks to see if the user want's to stop adding team members
-//             i = true;
-//         }
-//         else {
-//             // this takes the response and pulls from questionIndex the right set of questions for forming an object
-//            let current = response.nextTeam;
-//            inquirer.prompt(Utilites.QuestionIndex.current).then((response) =>{
-//             if (current === 'Engineer'){
-//                 let temp = new Engineer (response.Name, response.id, response.email, response.gitHub)
-//                 team.push(temp)
-//             }
-//             else {
-//                 let temp = new Intern (response.Name, response.id, response.email, response.School)
-//                 team.push(temp)
-//             }
-//            })
-//     }})
-// }
-
-// function init(){
-//     // await manager();
-//     teammate();
-//     // await console.log(team);
-// }
